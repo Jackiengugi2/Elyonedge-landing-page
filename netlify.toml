@@ -3,6 +3,16 @@
   publish = "."
   command = ""
 
+# inquiry.elyonedge.org is ElyonEdge's own landing page, so the root URL
+# serves it directly. status = 200 rewrites without changing the address bar;
+# force = true makes this win over any index.html sitting at the root.
+# The directory of all client pages stays reachable at /clients/.
+[[redirects]]
+  from = "/"
+  to = "/clients/elyonedge-marketing-sales/index.html"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
