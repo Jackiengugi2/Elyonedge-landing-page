@@ -1,40 +1,48 @@
-/* ==========================================================================
+/* ═══════════════════════════════════════════════════════════════════
    ElyonEdge Marketing & Sales — brand layer.
-   Palette sampled from the client's own documents (Sales Conversion Strategy
-   Handbook, FAQs and Keyword Automations set-up guides):
-     navy   #17313E / #1C2B33 / #1B2A4A
-     gold   #C9A34E / #B8860B
-     cream  #F4F1E8 / #FFF6E5
-     mist   #E9F2F2
-   Only tokens belong here — structure lives in ../../assets/css/base.css.
-   ========================================================================== */
+   Palette and type match the ElyonEdge site (about.html).
+   Only tokens belong here; structure lives in ../../assets/css/base.css.
+   ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  --ink: #17313e;
-  --ink-soft: #1b2a4a;
-  --accent: #c9a34e;
-  --accent-deep: #b8860b;
-  --accent-ink: #77590a;      /* 5.1:1 on white — safe for body-size text */
-  --paper: #ffffff;
-  --cream: #f4f1e8;
-  --mist: #e9f2f2;
-  --body: #3a4750;
-  --muted: #5a5a5a;
-  --line: rgba(23, 49, 62, 0.13);
-  --line-strong: rgba(23, 49, 62, 0.26);
-  --on-dark: #f7f4ec;
-  --on-dark-muted: rgba(247, 244, 236, 0.74);
+  /* Base */
+  --cream:    #FBF7F1;
+  --paper:    #FFFFFF;
+  --ink:      #0C2D6B;
+  --ink-soft: #2A3F6A;
+  --muted:    #6A7280;
+  --line:     #E8E3D8;
 
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+  /* Bold accent hues — used as CARD BACKGROUNDS with ink text on top.
+     --pink is nudged from #FF5A8C to #FF5F90 so ink clears 4.5:1 on it. */
+  --orange:    #F5A623;
+  --orange-dk: #D4891A;
+  --pink:      #FF5F90;
+  --pink-dk:   #E8437A;
+  --teal:      #14B8A6;
+  --teal-dk:   #0E9488;
+  --yellow:    #FFD23F;
 
-/* Fraunces reads best slightly less optical-sized at display weights. */
-h1, h2, h3, h4,
-.brandmark__name,
-.stage__name,
-.proof__school,
-.founder__name,
-.faq__q {
-  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 32;
+  /* Same hues darkened for use as TEXT on cream/white. The display hues
+     above all fail WCAG AA at body/label size, so labels, eyebrows and
+     italic accents use these instead. Tuned against the worst case — the
+     tinted .s-label pill over white — so each clears 4.5:1 everywhere. */
+  --orange-text: #925E07;
+  --pink-text:   #CD003E;
+  --teal-text:   #0D756A;
+
+  /* Translucent nav backgrounds, derived from --cream */
+  --nav-bg:       rgba(251, 247, 241, .88);
+  --nav-bg-solid: rgba(251, 247, 241, .96);
+
+  /* Radii & layout */
+  --r:    16px;
+  --r-sm: 10px;
+  --r-lg: 24px;
+  --maxw: 1180px;
+
+  /* Type */
+  --fh: 'Sora', system-ui, -apple-system, 'Segoe UI', sans-serif;  /* headings */
+  --fb: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; /* body */
+  --fs: 'Fraunces', Georgia, 'Times New Roman', serif;             /* italic accents */
 }
